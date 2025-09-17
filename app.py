@@ -10,7 +10,7 @@ from vertexai.language_models import TextGenerationModel
 # -------------------
 PROJECT_ID = "thinking-device-464711-n6"
 REGION = "europe-west4"
-BUCKET_NAME = "YOUR_BUCKET_NAME"  # replace with your GCS bucket
+BUCKET_NAME = "employee-dataset-bucket"  # replace with your GCS bucket
 CSV_FILE = "employees.csv"        # replace with your CSV file name
 
 # Make sure GOOGLE_APPLICATION_CREDENTIALS is set
@@ -69,3 +69,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
+
