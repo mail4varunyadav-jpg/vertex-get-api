@@ -17,7 +17,8 @@ def predict():
         # (logic to read employees.csv from GCS here)
         user_input = "Summarize the employee dataset."
 
-    vertexai.init(project="YOUR_PROJECT_ID", location="YOUR_REGION")
+    vertexai.init(project="thinking-device-464711-n6", location="europe-west4")
     model = TextGenerationModel.from_pretrained("text-bison")
     response = model.predict(user_input, max_output_tokens=256)
     return jsonify({"input": user_input, "output": response.text})
+
