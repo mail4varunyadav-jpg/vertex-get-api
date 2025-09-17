@@ -21,7 +21,8 @@ os.environ["GOOGLE_CLOUD_PROJECT"] = PROJECT_ID
 # Initialize Vertex AI
 # -------------------
 vertexai.init(location=REGION)
-model = TextGenerationModel.from_pretrained("text-bison")
+model = TextGenerationModel.from_pretrained("gemini-2.0-flash")
+
 
 # -------------------
 # Flask app
@@ -69,4 +70,5 @@ def predict():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080)
+
 
